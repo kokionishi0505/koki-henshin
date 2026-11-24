@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>キャラクター変身プロンプト集（全30種）</title>
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fdf6f8; color:#333; font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Noto Sans JP",sans-serif; line-height:1.8; }
+  .wrap { max-width:720px; margin:0 auto; padding:20px 16px 48px; }
+  header { text-align:center; padding:28px 12px 8px; }
+  header h1 { font-size:1.55rem; margin:0 0 8px; color:#c2437a; }
+  header p { margin:0; color:#666; font-size:.95rem; }
+  .chips { margin:14px 0 4px; }
+  .chip { display:inline-block; background:#fff; border:1.5px solid #f3b8cd; color:#c2437a; border-radius:999px; padding:2px 12px; font-size:.82rem; margin:2px; }
+  .card { background:#fff; border-radius:16px; box-shadow:0 2px 10px rgba(194,67,122,.10); padding:20px 18px; margin:18px 0; }
+  .step-head { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+  .num { flex:0 0 auto; width:34px; height:34px; border-radius:50%; background:#e7548a; color:#fff; font-weight:bold; display:flex; align-items:center; justify-content:center; font-size:1.05rem; }
+  .step-head h2 { font-size:1.15rem; margin:0; color:#c2437a; }
+  ul { margin:8px 0; padding-left:1.2em; }
+  li { margin:4px 0; }
+  button.copy { background:#e7548a; color:#fff; border:none; border-radius:999px; padding:9px 22px; font-size:.95rem; cursor:pointer; margin-top:10px; }
+  button.copy:active { opacity:.75; }
+  pre { white-space:pre-wrap; word-break:normal; overflow-wrap:anywhere; background:#2b2b30; color:#f5f5f5; border-radius:12px; padding:16px; font-size:.86rem; line-height:1.7; }
+  .note { font-size:.9rem; color:#555; }
+  .done { color:#2e7d32; font-size:.85rem; min-height:1.2em; }
+  h2.group-title { color:#c2437a; font-size:1.25rem; margin:34px 4px 2px; }
+  .card.pattern { padding:0; overflow:hidden; }
+  .card.pattern img { width:100%; display:block; }
+  .card.pattern .pbody { padding:16px 18px 20px; }
+  .card.pattern h3 { margin:0 0 4px; font-size:1.2rem; color:#c2437a; }
+  .card.pattern pre { margin-top:10px; }
+  .fix-row { display:flex; align-items:center; gap:10px; padding:9px 0; border-bottom:1px solid #f7e3ec; }
+  .fix-row:last-child { border-bottom:none; }
+  .fix-row .fname { font-weight:bold; flex:0 0 6em; font-size:.92rem; }
+  .fix-row .fdesc { flex:1; font-size:.85rem; color:#555; }
+  button.copy.small { padding:5px 14px; font-size:.82rem; margin-top:0; flex:0 0 auto; }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>キャラクター変身プロンプト集</h1>
+  <p>自分のキャラクターの顔を保ったまま、<br>フィギュア・浮世絵・たい焼きまで。全30種。</p>
+  <div class="chips">
+    <span class="chip">画像生成AIがあればOK</span>
+    <span class="chip">添付して貼るだけ</span>
+    <span class="chip">全30種</span>
+  </div>
+  <p style="margin-top:12px;">見本は全部、同じキャラクター（ミサキ）で実際に作ったものです。</p>
+</header>
+
+<section class="card">
+  <div class="step-head"><div class="num">1</div><h2>使い方</h2></div>
+  <ul>
+    <li>自分のキャラクターの画像を用意します。全身が分かる画像1枚＋顔アップの2枚を添付すると、顔が安定します</li>
+    <li>使いたいパターンの「このプロンプトをコピー」を押して、画像を添付したチャットに貼るだけです</li>
+    <li>プロンプトの中の〔　〕は、自分のキャラクターに合わせて書きかえてください（見た目・髪型・服装の固定ポイント）</li>
+    <li>使うのは自分のキャラクターの画像だけにしてください。他の人の写真やキャラクターは使わないでください</li>
+  </ul>
+</section>
+
+<h2 class="group-title">立体・おもちゃ系</h2>
+<section class="card pattern">
+  <img src="01.jpg" alt="フィギュア風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>フィギュア風</h3>
+    <button class="copy" onclick="copyEl('prompt1', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt1">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：1/6スケールフィギュアのような、台座に立つ精密な立体造形
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="02.jpg" alt="ミニチュア風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>ミニチュア風</h3>
+    <button class="copy" onclick="copyEl('prompt2', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt2">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：机の上に立つ小さなミニチュア人形のような姿
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="03.jpg" alt="ブロック玩具風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>ブロック玩具風</h3>
+    <button class="copy" onclick="copyEl('prompt3', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt3">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：プラスチックのブロックで組み立てた人形のような質感と関節
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="04.jpg" alt="プラモデル風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>プラモデル風</h3>
+    <button class="copy" onclick="copyEl('prompt4', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt4">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：ランナーから切り出したパーツを組み立てた模型のような、成形色と継ぎ目のある質感
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="05.jpg" alt="粘土細工風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>粘土細工風</h3>
+    <button class="copy" onclick="copyEl('prompt5', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt5">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：手作りの粘土人形のような、指跡の残る柔らかい質感
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="06.jpg" alt="バルーンアート風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>バルーンアート風</h3>
+    <button class="copy" onclick="copyEl('prompt6', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt6">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：細長い風船をねじって作ったバルーン人形のような、つやのあるゴムの質感と結び目
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="07.jpg" alt="ジオラマ風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>ジオラマ風</h3>
+    <button class="copy" onclick="copyEl('prompt7', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt7">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：箱庭のジオラマの中に立つミニチュアフィギュア。周りに小さな街並みや植物の模型
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="08.jpg" alt="ブリキ玩具風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>ブリキ玩具風</h3>
+    <button class="copy" onclick="copyEl('prompt8', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt8">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：ゼンマイ付きのレトロなブリキ玩具のような質感
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="09.jpg" alt="たい焼き風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>たい焼き風</h3>
+    <button class="copy" onclick="copyEl('prompt9', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt9">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：顔はそのまま、体がたい焼きの姿
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="10.jpg" alt="アイスキャンディー風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>アイスキャンディー風</h3>
+    <button class="copy" onclick="copyEl('prompt10', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt10">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：氷のキャンディーの中に全身が入った姿
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<h2 class="group-title">手仕事・アート系</h2>
+<section class="card pattern">
+  <img src="11.jpg" alt="刺繍風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>刺繍風</h3>
+    <button class="copy" onclick="copyEl('prompt11', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt11">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：布に刺繍されたような、糸の重なりが見える表現
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="12.jpg" alt="折り紙風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>折り紙風</h3>
+    <button class="copy" onclick="copyEl('prompt12', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt12">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：折り目のある紙人形のような姿
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="13.jpg" alt="切り絵風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>切り絵風</h3>
+    <button class="copy" onclick="copyEl('prompt13', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt13">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：和紙の上に置かれた切り抜きアートのような表現
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="14.jpg" alt="貼り絵風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>貼り絵風</h3>
+    <button class="copy" onclick="copyEl('prompt14', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt14">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：色紙や和紙をちぎって貼り重ねた、紙の繊維と重なりの見える質感
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="15.jpg" alt="消しゴムはんこ風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>消しゴムはんこ風</h3>
+    <button class="copy" onclick="copyEl('prompt15', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt15">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：はんこを押した版画のような、単色インクのかすれと彫り跡
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="16.jpg" alt="木彫り風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>木彫り風</h3>
+    <button class="copy" onclick="copyEl('prompt16', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt16">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：一木から彫り出した木彫りの像のような、木目と彫刻刀の跡
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="17.jpg" alt="ステンドグラス風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>ステンドグラス風</h3>
+    <button class="copy" onclick="copyEl('prompt17', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt17">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：色ガラスを鉛の線でつないだ窓絵のような、光を通す鮮やかな色面
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="18.jpg" alt="浮世絵風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>浮世絵風</h3>
+    <button class="copy" onclick="copyEl('prompt18', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt18">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：木版画の浮世絵の画風
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="19.jpg" alt="クレヨン画風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>クレヨン画風</h3>
+    <button class="copy" onclick="copyEl('prompt19', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt19">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：クレヨンで描いたような、ざらっとした質感とにじむ色使い
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="20.jpg" alt="銭湯ペンキ絵風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>銭湯ペンキ絵風</h3>
+    <button class="copy" onclick="copyEl('prompt20', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt20">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：銭湯の壁絵のような、はっきりした色と大らかな筆遣い。背景に富士山と波
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<h2 class="group-title">グッズ・季節系</h2>
+<section class="card pattern">
+  <img src="21.jpg" alt="シール風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>シール風</h3>
+    <button class="copy" onclick="copyEl('prompt21', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt21">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：白い太フチのステッカーのような姿
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="22.jpg" alt="アクリルキーホルダー風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>アクリルキーホルダー風</h3>
+    <button class="copy" onclick="copyEl('prompt22', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt22">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：透明アクリル板に印刷されたキーホルダーの実物写真風。上部にボールチェーン
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="23.jpg" alt="缶バッジ風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>缶バッジ風</h3>
+    <button class="copy" onclick="copyEl('prompt23', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt23">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：丸い缶バッジに印刷されたデザイン
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="24.jpg" alt="賞状風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>賞状風</h3>
+    <button class="copy" onclick="copyEl('prompt24', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt24">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：鳳凰模様の金枠がある正式な賞状の中央に、肖像として描かれた姿。文字は入れないでください
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="25.jpg" alt="駄菓子パッケージ風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>駄菓子パッケージ風</h3>
+    <button class="copy" onclick="copyEl('prompt25', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt25">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：昭和レトロな駄菓子の袋のパッケージイラスト風。実在の商品名・ブランド名は入れないでください
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="26.jpg" alt="年賀状風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>年賀状風</h3>
+    <button class="copy" onclick="copyEl('prompt26', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt26">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：年賀状の写真面のような、松竹梅や鶴のおめでたい和のモチーフの枠の中の姿。文字は入れないでください
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="27.jpg" alt="クリスマス飾り風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>クリスマス飾り風</h3>
+    <button class="copy" onclick="copyEl('prompt27', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt27">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：ツリーに吊るすオーナメント人形のような、金の紐で吊られた小さな立体飾り
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="28.jpg" alt="ハロウィン仮装風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>ハロウィン仮装風</h3>
+    <button class="copy" onclick="copyEl('prompt28', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt28">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：帽子やマントの小物で仮装した姿。顔と髪型は変えないでください
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="29.jpg" alt="すごろく風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>すごろく風</h3>
+    <button class="copy" onclick="copyEl('prompt29', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt29">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：双六の盤面の上に立つコマのような小さな立体フィギュア
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+<section class="card pattern">
+  <img src="30.jpg" alt="花火大会ポスター風の見本" loading="lazy">
+  <div class="pbody">
+    <h3>花火大会ポスター風</h3>
+    <button class="copy" onclick="copyEl('prompt30', this)">このプロンプトをコピー</button>
+    <div class="done"></div>
+    <pre id="prompt30">添付のキャラクターを、顔と髪型と形の特徴を保ったまま、次のスタイルに変身させてください。
+スタイル：夜空に大輪の花火が上がる川辺の風景の中に立つ姿。文字は入れないでください
+全身が1人だけ写る画像にしてください。別人化させないでください。
+私のキャラクターの固定ポイント：見た目は〔　〕、髪型は〔　〕、服装は〔　〕</pre>
+  </div>
+</section>
+
+<section class="card">
+  <div class="step-head"><div class="num">2</div><h2>うまくいかないときの追加指定</h2></div>
+  <p>結果がずれたら、下の一文を足して送り直してください。</p>
+  <div class="fix-row"><span class="fname">別人になった</span><span class="fdesc">顔と髪型は添付の画像のまま固定してください。別人化させないでください</span><button class="copy small" onclick="copyText('顔と髪型は添付の画像のまま固定してください。別人化させないでください', this)">コピー</button></div>
+  <div class="fix-row"><span class="fname">年上に見えた</span><span class="fdesc">見た目は〔20代後半〕です。年上に見せないでください</span><button class="copy small" onclick="copyText('見た目は〔20代後半〕です。年上に見せないでください。〔　〕は自分のキャラの年齢感に書きかえてください', this)">コピー</button></div>
+  <div class="fix-row"><span class="fname">服装が変わった</span><span class="fdesc">服装は〔　〕のまま変えないでください（〔　〕に自分の基本の服装を書く）</span><button class="copy small" onclick="copyText('服装は〔　〕のまま変えないでください', this)">コピー</button></div>
+  <div class="fix-row"><span class="fname">文字が乱れた</span><span class="fdesc">看板やパッケージなどの文字は入れないでください</span><button class="copy small" onclick="copyText('看板やパッケージなどの文字は入れないでください', this)">コピー</button></div>
+  <div class="done"></div>
+</section>
+
+<section class="card note">
+  <p>※生成結果の文字（看板・パッケージなど）は乱れることがあります。使う前に見直してください。</p>
+  <p>※実在のブランド名・商品名は、プロンプトにも画像内にも入れないでください。</p>
+  <p>※うまく出ないときは、そのまま公式LINEのトークに送ってください。</p>
+</section>
+</div>
+<script>
+function done(btn){ var card = btn.closest('.card'); var d = card ? card.querySelector('.done') : null; if(d){ d.textContent = 'コピーしました'; setTimeout(function(){ d.textContent=''; }, 2500); } }
+function copyText(t, btn){
+  function fb(){ var ta=document.createElement('textarea'); ta.value=t; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); }catch(e){} document.body.removeChild(ta); done(btn); }
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(function(){ done(btn); }, fb); } else { fb(); }
+}
+function copyEl(id, btn){ copyText(document.getElementById(id).innerText, btn); }
+</script>
+</body>
+</html>
